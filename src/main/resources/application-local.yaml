@@ -1,0 +1,38 @@
+spring:
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2-console
+#
+#  datasource:
+#    url: jdbc:h2:tcp://localhost/~/LocalStory
+#    username: sa
+#    password: 1
+#    driver-class-name: org.h2.Driver
+  datasource:
+    url: jdbc:mysql://localstory.cdlw5k7uqati.ap-northeast-2.rds.amazonaws.com:3306/LocalStory?&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 6397zooOO!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        show_sql: false
+      jdbc:
+        time_zone: Asia/Seoul
+      format_sql: true
+
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      mode: always
+
+img:
+  path: file:///Users/sangmin/Desktop/LocalStroy/imgs/
+  urlForAccess: /img/**
+
+accessIp: 127.0.0.1
